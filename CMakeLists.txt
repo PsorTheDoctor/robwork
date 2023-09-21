@@ -32,4 +32,6 @@ find_package(RobWorkStudio REQUIRED)
 message("-- RobWorkStudio found: " ${RWSTUDIO_ROOT})
 
 add_executable(reachability src/reachability.cpp)
+add_executable(linear src/linear.cpp)
 target_link_libraries(reachability ${ROBWORK_LIBRARIES})
+target_link_libraries(linear ${ROBWORK_LIBRARIES})

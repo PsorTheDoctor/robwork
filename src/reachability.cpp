@@ -81,11 +81,13 @@ int main (int argc, char** argv)
     // get the default state
     State state = wc->getDefaultState ();
     std::vector< Q > collisionFreeSolutions;
-
     double x, y;
+
+    // For every position of base frame
     for (x = -0.5; x < 0.5; x += 0.1) {
         for (y = -0.5; y < 0.5; y += 0.1) {
-
+            
+            // Move robot base to this position
             baseFrame->moveTo(Transform3D<>(Vector3D<>(x, y, 0), RPY<>(0, 0, 0)), state);
             collisionFreeSolutions.clear();
             
