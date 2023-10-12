@@ -33,5 +33,10 @@ message("-- RobWorkStudio found: " ${RWSTUDIO_ROOT})
 
 add_executable(reachability src/reachability.cpp)
 add_executable(linear src/linear.cpp)
+add_executable(parabolic src/parabolic.cpp)
+add_executable(rrt src/rrt_connect.cpp)
+
 target_link_libraries(reachability ${ROBWORK_LIBRARIES})
 target_link_libraries(linear ${ROBWORK_LIBRARIES})
+target_link_libraries(parabolic ${ROBWORK_LIBRARIES})
+target_link_libraries(rrt ${ROBWORK_LIBRARIES})

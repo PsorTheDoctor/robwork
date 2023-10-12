@@ -25,7 +25,7 @@ TimedStatePath recordRobotMovement (Device::Ptr device, const T& interp, State s
     return res;
 }
 
-TimedStatePath linInterp (Device::Ptr device, State state, Q from, Q to, double duration)
+TimedStatePath linearInterp (Device::Ptr device, State state, Q from, Q to, double duration)
 {
     LinearInterpolator<Q> interp(from, to, duration);
     return recordRobotMovement(device, interp, state);
@@ -34,7 +34,7 @@ TimedStatePath linInterp (Device::Ptr device, State state, Q from, Q to, double 
 int main (int argc, char** argv)
 {
     // load workcell
-    WorkCell::Ptr wc = WorkCellLoader::Factory::load ("../src/scene/Scene.wc.xml");
+    WorkCell::Ptr wc = WorkCellLoader::Factory::load ("../src/scenes/ur5_workcell/Scene.wc.xml");
     if (wc.isNull ()) {
         RW_THROW ("COULD NOT LOAD scene... check path!");
     }
@@ -46,13 +46,13 @@ int main (int argc, char** argv)
     }
 
     // define movement
-    Q q1 (0.0775973, 5.37959, -2.53825, 0.300232, -4.78999, -0);
-    Q q2 (1.53439, 4.78245, -2.19395, 0.553112, -6.24678, -0);
-    Q q3 (1.53439, 4.8908, -1.49275, -0.256476, -6.24678, -0);
-    Q q4 (0.0775973, 5.31938, -1.73337, -0.444431, -4.78999, -0);
+    Q q1 (0.0775973, 5.37959, -2.53825, 0.300232, -4.78999, 0);
+    Q q2 (1.53439, 4.78245, -2.19395, 0.553112, -6.24678, 0);
+    Q q3 (1.53439, 4.8908, -1.49275, -0.256476, -6.24678, 0);
+    Q q4 (0.0775973, 5.31938, -1.73337, -0.444431, -4.78999, 0);
 
     // Ex. 4.1
-    TimedStatePath linearQMotion = linInterp(robotUR5, wc->getDefaultState(), q1, q2, 5);
+    TimedStatePath linearQMotion = linearInterp(robotUR5, wc->getDefaultState(), q1, q2, 5);
     PathLoader::storeTimedStatePath(*wc, linearQMotion, "../src/playbacks/linear.rwplay");
     return 0;
 }
