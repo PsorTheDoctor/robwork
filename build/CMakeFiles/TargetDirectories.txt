@@ -1,6 +1,10 @@
 /home/adam/robwork/build/CMakeFiles/reachability.dir
+/home/adam/robwork/build/CMakeFiles/forkin.dir
 /home/adam/robwork/build/CMakeFiles/linear.dir
 /home/adam/robwork/build/CMakeFiles/parabolic.dir
+/home/adam/robwork/build/CMakeFiles/rrt_connect.dir
+/home/adam/robwork/build/CMakeFiles/pruning.dir
 /home/adam/robwork/build/CMakeFiles/rrt.dir
+/home/adam/robwork/build/CMakeFiles/handin1.dir
 /home/adam/robwork/build/CMakeFiles/edit_cache.dir
 /home/adam/robwork/build/CMakeFiles/rebuild_cache.dir

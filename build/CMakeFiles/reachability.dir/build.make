@@ -69,28 +69,28 @@ include CMakeFiles/reachability.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/reachability.dir/flags.make
 
-CMakeFiles/reachability.dir/src/reachability.cpp.o: CMakeFiles/reachability.dir/flags.make
-CMakeFiles/reachability.dir/src/reachability.cpp.o: /home/adam/robwork/src/reachability.cpp
-CMakeFiles/reachability.dir/src/reachability.cpp.o: CMakeFiles/reachability.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adam/robwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/reachability.dir/src/reachability.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/reachability.dir/src/reachability.cpp.o -MF CMakeFiles/reachability.dir/src/reachability.cpp.o.d -o CMakeFiles/reachability.dir/src/reachability.cpp.o -c /home/adam/robwork/src/reachability.cpp
+CMakeFiles/reachability.dir/src/exercises/reachability.cpp.o: CMakeFiles/reachability.dir/flags.make
+CMakeFiles/reachability.dir/src/exercises/reachability.cpp.o: /home/adam/robwork/src/exercises/reachability.cpp
+CMakeFiles/reachability.dir/src/exercises/reachability.cpp.o: CMakeFiles/reachability.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adam/robwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/reachability.dir/src/exercises/reachability.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/reachability.dir/src/exercises/reachability.cpp.o -MF CMakeFiles/reachability.dir/src/exercises/reachability.cpp.o.d -o CMakeFiles/reachability.dir/src/exercises/reachability.cpp.o -c /home/adam/robwork/src/exercises/reachability.cpp
 
-CMakeFiles/reachability.dir/src/reachability.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/reachability.dir/src/reachability.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/robwork/src/reachability.cpp > CMakeFiles/reachability.dir/src/reachability.cpp.i
+CMakeFiles/reachability.dir/src/exercises/reachability.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/reachability.dir/src/exercises/reachability.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/robwork/src/exercises/reachability.cpp > CMakeFiles/reachability.dir/src/exercises/reachability.cpp.i
 
-CMakeFiles/reachability.dir/src/reachability.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/reachability.dir/src/reachability.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/robwork/src/reachability.cpp -o CMakeFiles/reachability.dir/src/reachability.cpp.s
+CMakeFiles/reachability.dir/src/exercises/reachability.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/reachability.dir/src/exercises/reachability.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/robwork/src/exercises/reachability.cpp -o CMakeFiles/reachability.dir/src/exercises/reachability.cpp.s
 
 # Object files for target reachability
 reachability_OBJECTS = \
-"CMakeFiles/reachability.dir/src/reachability.cpp.o"
+"CMakeFiles/reachability.dir/src/exercises/reachability.cpp.o"
 
 # External object files for target reachability
 reachability_EXTERNAL_OBJECTS =
 
-reachability: CMakeFiles/reachability.dir/src/reachability.cpp.o
+reachability: CMakeFiles/reachability.dir/src/exercises/reachability.cpp.o
 reachability: CMakeFiles/reachability.dir/build.make
 reachability: /usr/lib/x86_64-linux-gnu/libxerces-c.so
 reachability: /usr/lib/x86_64-linux-gnu/libOpenGL.so

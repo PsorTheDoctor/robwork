@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/linear.dir/src/linear.cpp.o"
-  "CMakeFiles/linear.dir/src/linear.cpp.o.d"
+  "CMakeFiles/linear.dir/src/exercises/linear.cpp.o"
+  "CMakeFiles/linear.dir/src/exercises/linear.cpp.o.d"
   "linear"
   "linear.pdb"
 )

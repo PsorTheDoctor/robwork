@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/adam/robwork/src/linear.cpp" "CMakeFiles/linear.dir/src/linear.cpp.o" "gcc" "CMakeFiles/linear.dir/src/linear.cpp.o.d"
+  "/home/adam/robwork/src/exercises/linear.cpp" "CMakeFiles/linear.dir/src/exercises/linear.cpp.o" "gcc" "CMakeFiles/linear.dir/src/exercises/linear.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

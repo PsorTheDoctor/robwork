@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/reachability.dir/src/reachability.cpp.o"
-  "CMakeFiles/reachability.dir/src/reachability.cpp.o.d"
+  "CMakeFiles/reachability.dir/src/exercises/reachability.cpp.o"
+  "CMakeFiles/reachability.dir/src/exercises/reachability.cpp.o.d"
   "reachability"
   "reachability.pdb"
 )

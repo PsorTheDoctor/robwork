@@ -69,28 +69,28 @@ include CMakeFiles/linear.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/linear.dir/flags.make
 
-CMakeFiles/linear.dir/src/linear.cpp.o: CMakeFiles/linear.dir/flags.make
-CMakeFiles/linear.dir/src/linear.cpp.o: /home/adam/robwork/src/linear.cpp
-CMakeFiles/linear.dir/src/linear.cpp.o: CMakeFiles/linear.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adam/robwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/linear.dir/src/linear.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/linear.dir/src/linear.cpp.o -MF CMakeFiles/linear.dir/src/linear.cpp.o.d -o CMakeFiles/linear.dir/src/linear.cpp.o -c /home/adam/robwork/src/linear.cpp
+CMakeFiles/linear.dir/src/exercises/linear.cpp.o: CMakeFiles/linear.dir/flags.make
+CMakeFiles/linear.dir/src/exercises/linear.cpp.o: /home/adam/robwork/src/exercises/linear.cpp
+CMakeFiles/linear.dir/src/exercises/linear.cpp.o: CMakeFiles/linear.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adam/robwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/linear.dir/src/exercises/linear.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/linear.dir/src/exercises/linear.cpp.o -MF CMakeFiles/linear.dir/src/exercises/linear.cpp.o.d -o CMakeFiles/linear.dir/src/exercises/linear.cpp.o -c /home/adam/robwork/src/exercises/linear.cpp
 
-CMakeFiles/linear.dir/src/linear.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/linear.dir/src/linear.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/robwork/src/linear.cpp > CMakeFiles/linear.dir/src/linear.cpp.i
+CMakeFiles/linear.dir/src/exercises/linear.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/linear.dir/src/exercises/linear.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/robwork/src/exercises/linear.cpp > CMakeFiles/linear.dir/src/exercises/linear.cpp.i
 
-CMakeFiles/linear.dir/src/linear.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/linear.dir/src/linear.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/robwork/src/linear.cpp -o CMakeFiles/linear.dir/src/linear.cpp.s
+CMakeFiles/linear.dir/src/exercises/linear.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/linear.dir/src/exercises/linear.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/robwork/src/exercises/linear.cpp -o CMakeFiles/linear.dir/src/exercises/linear.cpp.s
 
 # Object files for target linear
 linear_OBJECTS = \
-"CMakeFiles/linear.dir/src/linear.cpp.o"
+"CMakeFiles/linear.dir/src/exercises/linear.cpp.o"
 
 # External object files for target linear
 linear_EXTERNAL_OBJECTS =
 
-linear: CMakeFiles/linear.dir/src/linear.cpp.o
+linear: CMakeFiles/linear.dir/src/exercises/linear.cpp.o
 linear: CMakeFiles/linear.dir/build.make
 linear: /usr/lib/x86_64-linux-gnu/libxerces-c.so
 linear: /usr/lib/x86_64-linux-gnu/libOpenGL.so

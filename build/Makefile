@@ -130,6 +130,19 @@ reachability/fast:
 .PHONY : reachability/fast
 
 #=============================================================================
+# Target rules for targets named forkin
+
+# Build rule for target.
+forkin: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 forkin
+.PHONY : forkin
+
+# fast build rule for target.
+forkin/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forkin.dir/build.make CMakeFiles/forkin.dir/build
+.PHONY : forkin/fast
+
+#=============================================================================
 # Target rules for targets named linear
 
 # Build rule for target.
@@ -156,6 +169,32 @@ parabolic/fast:
 .PHONY : parabolic/fast
 
 #=============================================================================
+# Target rules for targets named rrt_connect
+
+# Build rule for target.
+rrt_connect: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rrt_connect
+.PHONY : rrt_connect
+
+# fast build rule for target.
+rrt_connect/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrt_connect.dir/build.make CMakeFiles/rrt_connect.dir/build
+.PHONY : rrt_connect/fast
+
+#=============================================================================
+# Target rules for targets named pruning
+
+# Build rule for target.
+pruning: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pruning
+.PHONY : pruning
+
+# fast build rule for target.
+pruning/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pruning.dir/build.make CMakeFiles/pruning.dir/build
+.PHONY : pruning/fast
+
+#=============================================================================
 # Target rules for targets named rrt
 
 # Build rule for target.
@@ -168,101 +207,210 @@ rrt/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrt.dir/build.make CMakeFiles/rrt.dir/build
 .PHONY : rrt/fast
 
-src/linear.o: src/linear.cpp.o
-.PHONY : src/linear.o
+#=============================================================================
+# Target rules for targets named handin1
+
+# Build rule for target.
+handin1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 handin1
+.PHONY : handin1
+
+# fast build rule for target.
+handin1/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/handin1.dir/build.make CMakeFiles/handin1.dir/build
+.PHONY : handin1/fast
+
+src/exercises/forward_kinematics.o: src/exercises/forward_kinematics.cpp.o
+.PHONY : src/exercises/forward_kinematics.o
 
 # target to build an object file
-src/linear.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear.dir/build.make CMakeFiles/linear.dir/src/linear.cpp.o
-.PHONY : src/linear.cpp.o
+src/exercises/forward_kinematics.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forkin.dir/build.make CMakeFiles/forkin.dir/src/exercises/forward_kinematics.cpp.o
+.PHONY : src/exercises/forward_kinematics.cpp.o
 
-src/linear.i: src/linear.cpp.i
-.PHONY : src/linear.i
+src/exercises/forward_kinematics.i: src/exercises/forward_kinematics.cpp.i
+.PHONY : src/exercises/forward_kinematics.i
 
 # target to preprocess a source file
-src/linear.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear.dir/build.make CMakeFiles/linear.dir/src/linear.cpp.i
-.PHONY : src/linear.cpp.i
+src/exercises/forward_kinematics.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forkin.dir/build.make CMakeFiles/forkin.dir/src/exercises/forward_kinematics.cpp.i
+.PHONY : src/exercises/forward_kinematics.cpp.i
 
-src/linear.s: src/linear.cpp.s
-.PHONY : src/linear.s
+src/exercises/forward_kinematics.s: src/exercises/forward_kinematics.cpp.s
+.PHONY : src/exercises/forward_kinematics.s
 
 # target to generate assembly for a file
-src/linear.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear.dir/build.make CMakeFiles/linear.dir/src/linear.cpp.s
-.PHONY : src/linear.cpp.s
+src/exercises/forward_kinematics.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forkin.dir/build.make CMakeFiles/forkin.dir/src/exercises/forward_kinematics.cpp.s
+.PHONY : src/exercises/forward_kinematics.cpp.s
 
-src/parabolic.o: src/parabolic.cpp.o
-.PHONY : src/parabolic.o
+src/exercises/linear.o: src/exercises/linear.cpp.o
+.PHONY : src/exercises/linear.o
 
 # target to build an object file
-src/parabolic.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabolic.dir/build.make CMakeFiles/parabolic.dir/src/parabolic.cpp.o
-.PHONY : src/parabolic.cpp.o
+src/exercises/linear.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear.dir/build.make CMakeFiles/linear.dir/src/exercises/linear.cpp.o
+.PHONY : src/exercises/linear.cpp.o
 
-src/parabolic.i: src/parabolic.cpp.i
-.PHONY : src/parabolic.i
+src/exercises/linear.i: src/exercises/linear.cpp.i
+.PHONY : src/exercises/linear.i
 
 # target to preprocess a source file
-src/parabolic.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabolic.dir/build.make CMakeFiles/parabolic.dir/src/parabolic.cpp.i
-.PHONY : src/parabolic.cpp.i
+src/exercises/linear.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear.dir/build.make CMakeFiles/linear.dir/src/exercises/linear.cpp.i
+.PHONY : src/exercises/linear.cpp.i
 
-src/parabolic.s: src/parabolic.cpp.s
-.PHONY : src/parabolic.s
+src/exercises/linear.s: src/exercises/linear.cpp.s
+.PHONY : src/exercises/linear.s
 
 # target to generate assembly for a file
-src/parabolic.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabolic.dir/build.make CMakeFiles/parabolic.dir/src/parabolic.cpp.s
-.PHONY : src/parabolic.cpp.s
+src/exercises/linear.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear.dir/build.make CMakeFiles/linear.dir/src/exercises/linear.cpp.s
+.PHONY : src/exercises/linear.cpp.s
 
-src/reachability.o: src/reachability.cpp.o
-.PHONY : src/reachability.o
+src/exercises/parabolic.o: src/exercises/parabolic.cpp.o
+.PHONY : src/exercises/parabolic.o
 
 # target to build an object file
-src/reachability.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/reachability.dir/build.make CMakeFiles/reachability.dir/src/reachability.cpp.o
-.PHONY : src/reachability.cpp.o
+src/exercises/parabolic.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabolic.dir/build.make CMakeFiles/parabolic.dir/src/exercises/parabolic.cpp.o
+.PHONY : src/exercises/parabolic.cpp.o
 
-src/reachability.i: src/reachability.cpp.i
-.PHONY : src/reachability.i
+src/exercises/parabolic.i: src/exercises/parabolic.cpp.i
+.PHONY : src/exercises/parabolic.i
 
 # target to preprocess a source file
-src/reachability.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/reachability.dir/build.make CMakeFiles/reachability.dir/src/reachability.cpp.i
-.PHONY : src/reachability.cpp.i
+src/exercises/parabolic.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabolic.dir/build.make CMakeFiles/parabolic.dir/src/exercises/parabolic.cpp.i
+.PHONY : src/exercises/parabolic.cpp.i
 
-src/reachability.s: src/reachability.cpp.s
-.PHONY : src/reachability.s
+src/exercises/parabolic.s: src/exercises/parabolic.cpp.s
+.PHONY : src/exercises/parabolic.s
 
 # target to generate assembly for a file
-src/reachability.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/reachability.dir/build.make CMakeFiles/reachability.dir/src/reachability.cpp.s
-.PHONY : src/reachability.cpp.s
+src/exercises/parabolic.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabolic.dir/build.make CMakeFiles/parabolic.dir/src/exercises/parabolic.cpp.s
+.PHONY : src/exercises/parabolic.cpp.s
 
-src/rrt_connect.o: src/rrt_connect.cpp.o
-.PHONY : src/rrt_connect.o
+src/exercises/pruning.o: src/exercises/pruning.cpp.o
+.PHONY : src/exercises/pruning.o
 
 # target to build an object file
-src/rrt_connect.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrt.dir/build.make CMakeFiles/rrt.dir/src/rrt_connect.cpp.o
-.PHONY : src/rrt_connect.cpp.o
+src/exercises/pruning.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pruning.dir/build.make CMakeFiles/pruning.dir/src/exercises/pruning.cpp.o
+.PHONY : src/exercises/pruning.cpp.o
 
-src/rrt_connect.i: src/rrt_connect.cpp.i
-.PHONY : src/rrt_connect.i
+src/exercises/pruning.i: src/exercises/pruning.cpp.i
+.PHONY : src/exercises/pruning.i
 
 # target to preprocess a source file
-src/rrt_connect.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrt.dir/build.make CMakeFiles/rrt.dir/src/rrt_connect.cpp.i
-.PHONY : src/rrt_connect.cpp.i
+src/exercises/pruning.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pruning.dir/build.make CMakeFiles/pruning.dir/src/exercises/pruning.cpp.i
+.PHONY : src/exercises/pruning.cpp.i
 
-src/rrt_connect.s: src/rrt_connect.cpp.s
-.PHONY : src/rrt_connect.s
+src/exercises/pruning.s: src/exercises/pruning.cpp.s
+.PHONY : src/exercises/pruning.s
 
 # target to generate assembly for a file
-src/rrt_connect.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrt.dir/build.make CMakeFiles/rrt.dir/src/rrt_connect.cpp.s
-.PHONY : src/rrt_connect.cpp.s
+src/exercises/pruning.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pruning.dir/build.make CMakeFiles/pruning.dir/src/exercises/pruning.cpp.s
+.PHONY : src/exercises/pruning.cpp.s
+
+src/exercises/reachability.o: src/exercises/reachability.cpp.o
+.PHONY : src/exercises/reachability.o
+
+# target to build an object file
+src/exercises/reachability.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reachability.dir/build.make CMakeFiles/reachability.dir/src/exercises/reachability.cpp.o
+.PHONY : src/exercises/reachability.cpp.o
+
+src/exercises/reachability.i: src/exercises/reachability.cpp.i
+.PHONY : src/exercises/reachability.i
+
+# target to preprocess a source file
+src/exercises/reachability.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reachability.dir/build.make CMakeFiles/reachability.dir/src/exercises/reachability.cpp.i
+.PHONY : src/exercises/reachability.cpp.i
+
+src/exercises/reachability.s: src/exercises/reachability.cpp.s
+.PHONY : src/exercises/reachability.s
+
+# target to generate assembly for a file
+src/exercises/reachability.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reachability.dir/build.make CMakeFiles/reachability.dir/src/exercises/reachability.cpp.s
+.PHONY : src/exercises/reachability.cpp.s
+
+src/exercises/rrt_connect.o: src/exercises/rrt_connect.cpp.o
+.PHONY : src/exercises/rrt_connect.o
+
+# target to build an object file
+src/exercises/rrt_connect.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrt_connect.dir/build.make CMakeFiles/rrt_connect.dir/src/exercises/rrt_connect.cpp.o
+.PHONY : src/exercises/rrt_connect.cpp.o
+
+src/exercises/rrt_connect.i: src/exercises/rrt_connect.cpp.i
+.PHONY : src/exercises/rrt_connect.i
+
+# target to preprocess a source file
+src/exercises/rrt_connect.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrt_connect.dir/build.make CMakeFiles/rrt_connect.dir/src/exercises/rrt_connect.cpp.i
+.PHONY : src/exercises/rrt_connect.cpp.i
+
+src/exercises/rrt_connect.s: src/exercises/rrt_connect.cpp.s
+.PHONY : src/exercises/rrt_connect.s
+
+# target to generate assembly for a file
+src/exercises/rrt_connect.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrt_connect.dir/build.make CMakeFiles/rrt_connect.dir/src/exercises/rrt_connect.cpp.s
+.PHONY : src/exercises/rrt_connect.cpp.s
+
+src/exercises/task_constrained_rrt.o: src/exercises/task_constrained_rrt.cpp.o
+.PHONY : src/exercises/task_constrained_rrt.o
+
+# target to build an object file
+src/exercises/task_constrained_rrt.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrt.dir/build.make CMakeFiles/rrt.dir/src/exercises/task_constrained_rrt.cpp.o
+.PHONY : src/exercises/task_constrained_rrt.cpp.o
+
+src/exercises/task_constrained_rrt.i: src/exercises/task_constrained_rrt.cpp.i
+.PHONY : src/exercises/task_constrained_rrt.i
+
+# target to preprocess a source file
+src/exercises/task_constrained_rrt.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrt.dir/build.make CMakeFiles/rrt.dir/src/exercises/task_constrained_rrt.cpp.i
+.PHONY : src/exercises/task_constrained_rrt.cpp.i
+
+src/exercises/task_constrained_rrt.s: src/exercises/task_constrained_rrt.cpp.s
+.PHONY : src/exercises/task_constrained_rrt.s
+
+# target to generate assembly for a file
+src/exercises/task_constrained_rrt.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrt.dir/build.make CMakeFiles/rrt.dir/src/exercises/task_constrained_rrt.cpp.s
+.PHONY : src/exercises/task_constrained_rrt.cpp.s
+
+src/project/handin1.o: src/project/handin1.cpp.o
+.PHONY : src/project/handin1.o
+
+# target to build an object file
+src/project/handin1.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/handin1.dir/build.make CMakeFiles/handin1.dir/src/project/handin1.cpp.o
+.PHONY : src/project/handin1.cpp.o
+
+src/project/handin1.i: src/project/handin1.cpp.i
+.PHONY : src/project/handin1.i
+
+# target to preprocess a source file
+src/project/handin1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/handin1.dir/build.make CMakeFiles/handin1.dir/src/project/handin1.cpp.i
+.PHONY : src/project/handin1.cpp.i
+
+src/project/handin1.s: src/project/handin1.cpp.s
+.PHONY : src/project/handin1.s
+
+# target to generate assembly for a file
+src/project/handin1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/handin1.dir/build.make CMakeFiles/handin1.dir/src/project/handin1.cpp.s
+.PHONY : src/project/handin1.cpp.s
 
 # Help Target
 help:
@@ -272,22 +420,38 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... forkin"
+	@echo "... handin1"
 	@echo "... linear"
 	@echo "... parabolic"
+	@echo "... pruning"
 	@echo "... reachability"
 	@echo "... rrt"
-	@echo "... src/linear.o"
-	@echo "... src/linear.i"
-	@echo "... src/linear.s"
-	@echo "... src/parabolic.o"
-	@echo "... src/parabolic.i"
-	@echo "... src/parabolic.s"
-	@echo "... src/reachability.o"
-	@echo "... src/reachability.i"
-	@echo "... src/reachability.s"
-	@echo "... src/rrt_connect.o"
-	@echo "... src/rrt_connect.i"
-	@echo "... src/rrt_connect.s"
+	@echo "... rrt_connect"
+	@echo "... src/exercises/forward_kinematics.o"
+	@echo "... src/exercises/forward_kinematics.i"
+	@echo "... src/exercises/forward_kinematics.s"
+	@echo "... src/exercises/linear.o"
+	@echo "... src/exercises/linear.i"
+	@echo "... src/exercises/linear.s"
+	@echo "... src/exercises/parabolic.o"
+	@echo "... src/exercises/parabolic.i"
+	@echo "... src/exercises/parabolic.s"
+	@echo "... src/exercises/pruning.o"
+	@echo "... src/exercises/pruning.i"
+	@echo "... src/exercises/pruning.s"
+	@echo "... src/exercises/reachability.o"
+	@echo "... src/exercises/reachability.i"
+	@echo "... src/exercises/reachability.s"
+	@echo "... src/exercises/rrt_connect.o"
+	@echo "... src/exercises/rrt_connect.i"
+	@echo "... src/exercises/rrt_connect.s"
+	@echo "... src/exercises/task_constrained_rrt.o"
+	@echo "... src/exercises/task_constrained_rrt.i"
+	@echo "... src/exercises/task_constrained_rrt.s"
+	@echo "... src/project/handin1.o"
+	@echo "... src/project/handin1.i"
+	@echo "... src/project/handin1.s"
 .PHONY : help
 
 
