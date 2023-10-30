@@ -220,6 +220,19 @@ handin1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/handin1.dir/build.make CMakeFiles/handin1.dir/build
 .PHONY : handin1/fast
 
+#=============================================================================
+# Target rules for targets named handin2
+
+# Build rule for target.
+handin2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 handin2
+.PHONY : handin2
+
+# fast build rule for target.
+handin2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/handin2.dir/build.make CMakeFiles/handin2.dir/build
+.PHONY : handin2/fast
+
 src/exercises/forward_kinematics.o: src/exercises/forward_kinematics.cpp.o
 .PHONY : src/exercises/forward_kinematics.o
 
@@ -412,6 +425,30 @@ src/project/handin1.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/handin1.dir/build.make CMakeFiles/handin1.dir/src/project/handin1.cpp.s
 .PHONY : src/project/handin1.cpp.s
 
+src/project/handin2.o: src/project/handin2.cpp.o
+.PHONY : src/project/handin2.o
+
+# target to build an object file
+src/project/handin2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/handin2.dir/build.make CMakeFiles/handin2.dir/src/project/handin2.cpp.o
+.PHONY : src/project/handin2.cpp.o
+
+src/project/handin2.i: src/project/handin2.cpp.i
+.PHONY : src/project/handin2.i
+
+# target to preprocess a source file
+src/project/handin2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/handin2.dir/build.make CMakeFiles/handin2.dir/src/project/handin2.cpp.i
+.PHONY : src/project/handin2.cpp.i
+
+src/project/handin2.s: src/project/handin2.cpp.s
+.PHONY : src/project/handin2.s
+
+# target to generate assembly for a file
+src/project/handin2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/handin2.dir/build.make CMakeFiles/handin2.dir/src/project/handin2.cpp.s
+.PHONY : src/project/handin2.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -422,6 +459,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... forkin"
 	@echo "... handin1"
+	@echo "... handin2"
 	@echo "... linear"
 	@echo "... parabolic"
 	@echo "... pruning"
@@ -452,6 +490,9 @@ help:
 	@echo "... src/project/handin1.o"
 	@echo "... src/project/handin1.i"
 	@echo "... src/project/handin1.s"
+	@echo "... src/project/handin2.o"
+	@echo "... src/project/handin2.i"
+	@echo "... src/project/handin2.s"
 .PHONY : help
 
 

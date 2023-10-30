@@ -6,5 +6,6 @@
 /home/adam/robwork/build/CMakeFiles/pruning.dir
 /home/adam/robwork/build/CMakeFiles/rrt.dir
 /home/adam/robwork/build/CMakeFiles/handin1.dir
+/home/adam/robwork/build/CMakeFiles/handin2.dir
 /home/adam/robwork/build/CMakeFiles/edit_cache.dir
 /home/adam/robwork/build/CMakeFiles/rebuild_cache.dir

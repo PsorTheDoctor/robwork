@@ -40,6 +40,7 @@ add_executable(pruning src/exercises/pruning.cpp)
 add_executable(rrt src/exercises/task_constrained_rrt.cpp)
 
 add_executable(handin1 src/project/handin1.cpp)
+add_executable(handin2 src/project/handin2.cpp)
 
 target_link_libraries(reachability ${ROBWORK_LIBRARIES})
 target_link_libraries(forkin ${ROBWORK_LIBRARIES})
@@ -50,3 +51,4 @@ target_link_libraries(pruning ${ROBWORK_LIBRARIES})
 target_link_libraries(rrt ${ROBWORK_LIBRARIES})
 
 target_link_libraries(handin1 ${ROBWORK_LIBRARIES})
+target_link_libraries(handin2 ${ROBWORK_LIBRARIES})

@@ -8,8 +8,11 @@
 #include <rw/trajectory/ParabolicBlend.hpp>
 #include <rw/trajectory/Path.hpp>
 
-#include <filesystem>
+#include <iostream>
+#include <fstream>
+#include <string>
 
+using namespace std;
 using namespace rw::loaders;
 using namespace rw::math;
 using namespace rw::trajectory;
@@ -17,19 +20,26 @@ using namespace rw::models;
 using namespace rw::kinematics;
 
 template<class T>
-TimedStatePath recordRobotMovement(Device::Ptr robot, const T& interp, State state) {
+TimedStatePath recordRobotMovement(
+    Device::Ptr robot, const T& interp, State state, string filename
+) {
     TimedStatePath res;
+    ofstream file;
+    file.open("../src/project/data/" + filename);
+    string line;
 
     for (double i = 0; i < interp.duration(); i += 0.05) {
         robot->setQ(interp.x(i), state);
         res.push_back(TimedState(i, state));
-    }
-    return res;
-}
 
-TimedStatePath linInterp(Device::Ptr robot, State state, Q from, Q to, double duration) {
-    LinearInterpolator<Q> interp(from, to, duration);
-    return recordRobotMovement(robot, interp, state);
+        line = to_string(i) + "," +
+            to_string(robot->baseTend(state).P()(0)) + "," +
+            to_string(robot->baseTend(state).P()(1)) + "," +
+            to_string(robot->baseTend(state).P()(2));
+        file << line << endl;
+    }
+    file.close();
+    return res;
 }
  
 Trajectory<Q>::Ptr linInterp(
@@ -112,12 +122,12 @@ int main (int argc, char** argv)
     Q q6 (-0.317598, -1.82612, -2.19964, -2.31715, -0.330426, -3.06312);
     Q q7 (-0.533163, -1.93222, -2.03989, -2.34841, -0.545764, -3.08773); // placing pose
 
-    Trajectory<Q>::Ptr traj  = linInterp({q1, q2, q3, q4, q5, q6, q7}, 5, false);
-    TimedStatePath pathQMotion = recordRobotMovement(robot, *traj, state);
+    Trajectory<Q>::Ptr traj = linInterp({q1, q2, q3, q4, q5, q6, q7}, 5, false);
+    TimedStatePath pathQMotion = recordRobotMovement(robot, *traj, state, "linear.csv");
     PathLoader::storeTimedStatePath(*wc, pathQMotion, "../src/project/playbacks/linear.rwplay");
 
     Trajectory<Q>::Ptr trajBlend = linInterp({q1, q2, q3, q4, q5, q6, q7}, 5, true, 0.1);
-    TimedStatePath pathQBlendMotion = recordRobotMovement(robot, *trajBlend, state);
+    TimedStatePath pathQBlendMotion = recordRobotMovement(robot, *trajBlend, state, "parabolic.csv");
     PathLoader::storeTimedStatePath(*wc, pathQBlendMotion, "../src/project/playbacks/parabolic.rwplay");
     return 0;
 }

@@ -118,6 +118,5 @@ int main(int argc, char** argv) {
             *wc, tStatePath, "../src/playbacks/rrt_connect.rwplay"
         );
     }
-
 	return 0;
 }
