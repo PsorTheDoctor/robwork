@@ -1,2 +1,2 @@
 # robwork
-Interfacing with RobWork - a simulation software developed by SDU Robotics.
+Interfacing with RobWork - a simulation software developed at SDU.
