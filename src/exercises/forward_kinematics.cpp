@@ -110,7 +110,7 @@ int main (int argc, char** argv)
 
     const Transform3D<> baseTtool = device->baseTframe(tcpFrame, state);
 
-    cout << "RW:\n" << baseTtool.P() << " " << RPY<>(baseTtool.R ()) << endl;
+    cout << "RW:\n" << baseTtool.P() << " " << RPY<>(baseTtool.R()) << endl;
 
     return 0;
 }
